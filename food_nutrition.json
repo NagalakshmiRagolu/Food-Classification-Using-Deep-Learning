@@ -1,0 +1,342 @@
+[
+    {
+        "food_name": "apple_pie",
+        "nutritional_info": {
+            "protein": "8g",
+            "fiber": "2g",
+            "calories": 581,
+            "carbohydrates": "53g",
+            "fat": "19g"
+        }
+    },
+    {
+        "food_name": "Baked Potato",
+        "nutritional_info": {
+            "protein": "25g",
+            "fiber": "6g",
+            "calories": 421,
+            "carbohydrates": "59g",
+            "fat": "12g"
+        }
+    },
+    {
+        "food_name": "burger",
+        "nutritional_info": {
+            "protein": "4g",
+            "fiber": "10g",
+            "calories": 160,
+            "carbohydrates": "18g",
+            "fat": "8g"
+        }
+    },
+    {
+        "food_name": "butter_naan",
+        "nutritional_info": {
+            "protein": "13g",
+            "fiber": "2g",
+            "calories": 106,
+            "carbohydrates": "49g",
+            "fat": "9g"
+        }
+    },
+    {
+        "food_name": "chai",
+        "nutritional_info": {
+            "protein": "17g",
+            "fiber": "10g",
+            "calories": 243,
+            "carbohydrates": "13g",
+            "fat": "21g"
+        }
+    },
+    {
+        "food_name": "chapati",
+        "nutritional_info": {
+            "protein": "1g",
+            "fiber": "10g",
+            "calories": 544,
+            "carbohydrates": "30g",
+            "fat": "12g"
+        }
+    },
+    {
+        "food_name": "cheesecake",
+        "nutritional_info": {
+            "protein": "9g",
+            "fiber": "4g",
+            "calories": 378,
+            "carbohydrates": "19g",
+            "fat": "8g"
+        }
+    },
+    {
+        "food_name": "chicken_curry",
+        "nutritional_info": {
+            "protein": "22g",
+            "fiber": "6g",
+            "calories": 295,
+            "carbohydrates": "35g",
+            "fat": "11g"
+        }
+    },
+    {
+        "food_name": "chole_bhature",
+        "nutritional_info": {
+            "protein": "15g",
+            "fiber": "10g",
+            "calories": 306,
+            "carbohydrates": "51g",
+            "fat": "4g"
+        }
+    },
+    {
+        "food_name": "Crispy Chicken",
+        "nutritional_info": {
+            "protein": "29g",
+            "fiber": "8g",
+            "calories": 322,
+            "carbohydrates": "55g",
+            "fat": "18g"
+        }
+    },
+    {
+        "food_name": "dal_makhani",
+        "nutritional_info": {
+            "protein": "12g",
+            "fiber": "9g",
+            "calories": 260,
+            "carbohydrates": "25g",
+            "fat": "11g"
+        }
+    },
+    {
+        "food_name": "dhokla",
+        "nutritional_info": {
+            "protein": "15g",
+            "fiber": "6g",
+            "calories": 470,
+            "carbohydrates": "27g",
+            "fat": "12g"
+        }
+    },
+    {
+        "food_name": "Donut",
+        "nutritional_info": {
+            "protein": "30g",
+            "fiber": "4g",
+            "calories": 468,
+            "carbohydrates": "52g",
+            "fat": "5g"
+        }
+    },
+    {
+        "food_name": "fried_rice",
+        "nutritional_info": {
+            "protein": "13g",
+            "fiber": "3g",
+            "calories": 421,
+            "carbohydrates": "33g",
+            "fat": "11g"
+        }
+    },
+    {
+        "food_name": "Fries",
+        "nutritional_info": {
+            "protein": "6g",
+            "fiber": "3g",
+            "calories": 102,
+            "carbohydrates": "24g",
+            "fat": "17g"
+        }
+    },
+    {
+        "food_name": "Hot Dog",
+        "nutritional_info": {
+            "protein": "29g",
+            "fiber": "4g",
+            "calories": 146,
+            "carbohydrates": "53g",
+            "fat": "3g"
+        }
+    },
+    {
+        "food_name": "ice_cream",
+        "nutritional_info": {
+            "protein": "28g",
+            "fiber": "10g",
+            "calories": 247,
+            "carbohydrates": "21g",
+            "fat": "15g"
+        }
+    },
+    {
+        "food_name": "idli",
+        "nutritional_info": {
+            "protein": "24g",
+            "fiber": "8g",
+            "calories": 139,
+            "carbohydrates": "45g",
+            "fat": "3g"
+        }
+    },
+    {
+        "food_name": "jalebi",
+        "nutritional_info": {
+            "protein": "1g",
+            "fiber": "7g",
+            "calories": 416,
+            "carbohydrates": "23g",
+            "fat": "13g"
+        }
+    },
+    {
+        "food_name": "kaathi_rolls",
+        "nutritional_info": {
+            "protein": "30g",
+            "fiber": "8g",
+            "calories": 536,
+            "carbohydrates": "63g",
+            "fat": "4g"
+        }
+    },
+    {
+        "food_name": "kadai_paneer",
+        "nutritional_info": {
+            "protein": "14g",
+            "fiber": "3g",
+            "calories": 459,
+            "carbohydrates": "30g",
+            "fat": "5g"
+        }
+    },
+    {
+        "food_name": "kulfi",
+        "nutritional_info": {
+            "protein": "5g",
+            "fiber": "4g",
+            "calories": 406,
+            "carbohydrates": "10g",
+            "fat": "7g"
+        }
+    },
+    {
+        "food_name": "masala_dosa",
+        "nutritional_info": {
+            "protein": "1g",
+            "fiber": "6g",
+            "calories": 352,
+            "carbohydrates": "64g",
+            "fat": "6g"
+        }
+    },
+    {
+        "food_name": "momos",
+        "nutritional_info": {
+            "protein": "2g",
+            "fiber": "2g",
+            "calories": 441,
+            "carbohydrates": "64g",
+            "fat": "9g"
+        }
+    },
+    {
+        "food_name": "omelette",
+        "nutritional_info": {
+            "protein": "2g",
+            "fiber": "4g",
+            "calories": 288,
+            "carbohydrates": "16g",
+            "fat": "14g"
+        }
+    },
+    {
+        "food_name": "paani_puri",
+        "nutritional_info": {
+            "protein": "30g",
+            "fiber": "3g",
+            "calories": 222,
+            "carbohydrates": "11g",
+            "fat": "11g"
+        }
+    },
+    {
+        "food_name": "pakode",
+        "nutritional_info": {
+            "protein": "28g",
+            "fiber": "5g",
+            "calories": 231,
+            "carbohydrates": "33g",
+            "fat": "3g"
+        }
+    },
+    {
+        "food_name": "pav_bhaji",
+        "nutritional_info": {
+            "protein": "29g",
+            "fiber": "5g",
+            "calories": 491,
+            "carbohydrates": "58g",
+            "fat": "23g"
+        }
+    },
+    {
+        "food_name": "pizza",
+        "nutritional_info": {
+            "protein": "28g",
+            "fiber": "5g",
+            "calories": 407,
+            "carbohydrates": "50g",
+            "fat": "14g"
+        }
+    },
+    {
+        "food_name": "samosa",
+        "nutritional_info": {
+            "protein": "25g",
+            "fiber": "3g",
+            "calories": 492,
+            "carbohydrates": "47g",
+            "fat": "15g"
+        }
+    },
+    {
+        "food_name": "Sandwich",
+        "nutritional_info": {
+            "protein": "28g",
+            "fiber": "9g",
+            "calories": 213,
+            "carbohydrates": "62g",
+            "fat": "23g"
+        }
+    },
+    {
+        "food_name": "sushi",
+        "nutritional_info": {
+            "protein": "26g",
+            "fiber": "5g",
+            "calories": 303,
+            "carbohydrates": "28g",
+            "fat": "9g"
+        }
+    },
+    {
+        "food_name": "Taco",
+        "nutritional_info": {
+            "protein": "26g",
+            "fiber": "5g",
+            "calories": 228,
+            "carbohydrates": "64g",
+            "fat": "25g"
+        }
+    },
+    {
+        "food_name": "Taquito",
+        "nutritional_info": {
+            "protein": "6g",
+            "fiber": "8g",
+            "calories": 226,
+            "carbohydrates": "69g",
+            "fat": "15g"
+        }
+    }
+]

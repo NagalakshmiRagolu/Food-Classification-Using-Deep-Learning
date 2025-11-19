@@ -1,0 +1,469 @@
+2025-11-19 19:28:28,662 - INFO - FOOD_CLASSIFICATION instance initialized with dataset path: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Food Classification dataset
+2025-11-19 19:28:28,662 - INFO - class names are : ['apple_pie', 'Baked Potato', 'burger', 'butter_naan', 'chai', 'chapati', 'cheesecake', 'chicken_curry', 'chole_bhature', 'Crispy Chicken', 'dal_makhani', 'dhokla', 'Donut', 'fried_rice', 'Fries', 'Hot Dog', 'ice_cream', 'idli', 'jalebi', 'kaathi_rolls', 'kadai_paneer', 'kulfi', 'masala_dosa', 'momos', 'omelette', 'paani_puri', 'pakode', 'pav_bhaji', 'pizza', 'samosa', 'Sandwich', 'sushi', 'Taco', 'Taquito']
+2025-11-19 19:28:28,662 - INFO - nutritional info generated for 34 items
+2025-11-19 19:28:28,662 - INFO - class names are : ['apple_pie', 'Baked Potato', 'burger', 'butter_naan', 'chai', 'chapati', 'cheesecake', 'chicken_curry', 'chole_bhature', 'Crispy Chicken', 'dal_makhani', 'dhokla', 'Donut', 'fried_rice', 'Fries', 'Hot Dog', 'ice_cream', 'idli', 'jalebi', 'kaathi_rolls', 'kadai_paneer', 'kulfi', 'masala_dosa', 'momos', 'omelette', 'paani_puri', 'pakode', 'pav_bhaji', 'pizza', 'samosa', 'Sandwich', 'sushi', 'Taco', 'Taquito']
+2025-11-19 19:28:28,662 - INFO - nutritional info generated for 34 items
+2025-11-19 19:28:28,662 - INFO - Data received in json_data(): 34 items
+2025-11-19 19:28:28,669 - INFO - JSON file created successfully at: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\food_nutrition.json
+2025-11-19 19:28:29,529 - INFO - apple_pie: Train=120, Valid=40, Test=40
+2025-11-19 19:28:30,259 - INFO - Baked Potato: Train=120, Valid=40, Test=40
+2025-11-19 19:28:31,000 - INFO - burger: Train=120, Valid=40, Test=40
+2025-11-19 19:28:31,731 - INFO - butter_naan: Train=120, Valid=40, Test=40
+2025-11-19 19:28:32,504 - INFO - chai: Train=120, Valid=40, Test=40
+2025-11-19 19:28:33,280 - INFO - chapati: Train=120, Valid=40, Test=40
+2025-11-19 19:28:34,000 - INFO - cheesecake: Train=120, Valid=40, Test=40
+2025-11-19 19:28:34,784 - INFO - chicken_curry: Train=120, Valid=40, Test=40
+2025-11-19 19:28:35,515 - INFO - chole_bhature: Train=120, Valid=40, Test=40
+2025-11-19 19:28:36,345 - INFO - Crispy Chicken: Train=120, Valid=40, Test=40
+2025-11-19 19:28:37,076 - INFO - dal_makhani: Train=120, Valid=40, Test=40
+2025-11-19 19:28:37,921 - INFO - dhokla: Train=120, Valid=40, Test=40
+2025-11-19 19:28:38,665 - INFO - Donut: Train=120, Valid=40, Test=40
+2025-11-19 19:28:39,423 - INFO - fried_rice: Train=120, Valid=40, Test=40
+2025-11-19 19:28:40,332 - INFO - Fries: Train=120, Valid=40, Test=40
+2025-11-19 19:28:40,472 - ERROR - Error in splitting_data on line 162 because cannot identify image file 'C:\\INTERNSHIP_VIHARATECH\\INTERN_PR2\\Selected_images\\Hot Dog\\Hot Dog - Train (1092).jpeg'
+2025-11-19 19:28:40,472 - INFO - checking length of train data : 120
+2025-11-19 19:28:40,472 - INFO - checking length of validation data : 40
+2025-11-19 19:28:40,472 - INFO - checking length of test data : 40
+2025-11-19 19:28:40,472 - INFO - Processing: Train
+2025-11-19 19:28:40,593 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_1
+2025-11-19 19:28:40,682 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_2
+2025-11-19 19:28:40,812 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_3
+2025-11-19 19:28:40,922 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_4
+2025-11-19 19:28:41,042 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_5
+2025-11-19 19:28:41,076 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_6
+2025-11-19 19:28:41,076 - INFO - Total classes found in Train: 16
+2025-11-19 19:28:41,076 - INFO - Moved Baked Potato to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_1
+2025-11-19 19:28:41,076 - INFO - Moved Crispy Chicken to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_1
+2025-11-19 19:28:41,081 - INFO - Moved Donut to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_1
+2025-11-19 19:28:41,081 - INFO - Moved Fries to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_2
+2025-11-19 19:28:41,081 - INFO - Moved Hot Dog to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_2
+2025-11-19 19:28:41,081 - INFO - Moved apple_pie to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_2
+2025-11-19 19:28:41,081 - INFO - Moved burger to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_3
+2025-11-19 19:28:41,081 - INFO - Moved butter_naan to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_3
+2025-11-19 19:28:41,081 - INFO - Moved chai to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_3
+2025-11-19 19:28:41,081 - INFO - Moved chapati to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_4
+2025-11-19 19:28:41,091 - INFO - Moved cheesecake to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_4
+2025-11-19 19:28:41,091 - INFO - Moved chicken_curry to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_4
+2025-11-19 19:28:41,092 - INFO - Moved chole_bhature to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_5
+2025-11-19 19:28:41,094 - INFO - Moved dal_makhani to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_5
+2025-11-19 19:28:41,094 - INFO - Moved dhokla to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_5
+2025-11-19 19:28:41,096 - INFO - Moved fried_rice to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Train\Group_6
+2025-11-19 19:28:41,096 - INFO - Train data grouped into 6 folders successfully.
+2025-11-19 19:28:41,096 - INFO - Processing: Validation
+2025-11-19 19:28:41,131 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_1
+2025-11-19 19:28:41,152 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_2
+2025-11-19 19:28:41,192 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_3
+2025-11-19 19:28:41,222 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_4
+2025-11-19 19:28:41,252 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_5
+2025-11-19 19:28:41,268 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_6
+2025-11-19 19:28:41,268 - INFO - Total classes found in Validation: 16
+2025-11-19 19:28:41,270 - INFO - Moved Baked Potato to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_1
+2025-11-19 19:28:41,272 - INFO - Moved Crispy Chicken to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_1
+2025-11-19 19:28:41,272 - INFO - Moved Donut to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_1
+2025-11-19 19:28:41,274 - INFO - Moved Fries to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_2
+2025-11-19 19:28:41,274 - INFO - Moved Hot Dog to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_2
+2025-11-19 19:28:41,276 - INFO - Moved apple_pie to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_2
+2025-11-19 19:28:41,276 - INFO - Moved burger to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_3
+2025-11-19 19:28:41,278 - INFO - Moved butter_naan to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_3
+2025-11-19 19:28:41,278 - INFO - Moved chai to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_3
+2025-11-19 19:28:41,282 - INFO - Moved chapati to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_4
+2025-11-19 19:28:41,282 - INFO - Moved cheesecake to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_4
+2025-11-19 19:28:41,284 - INFO - Moved chicken_curry to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_4
+2025-11-19 19:28:41,284 - INFO - Moved chole_bhature to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_5
+2025-11-19 19:28:41,286 - INFO - Moved dal_makhani to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_5
+2025-11-19 19:28:41,286 - INFO - Moved dhokla to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_5
+2025-11-19 19:28:41,288 - INFO - Moved fried_rice to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Validation\Group_6
+2025-11-19 19:28:41,288 - INFO - Validation data grouped into 6 folders successfully.
+2025-11-19 19:28:41,288 - INFO - Processing: Test
+2025-11-19 19:28:41,322 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_1
+2025-11-19 19:28:41,347 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_2
+2025-11-19 19:28:41,371 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_3
+2025-11-19 19:28:41,410 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_4
+2025-11-19 19:28:41,448 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_5
+2025-11-19 19:28:41,462 - INFO - Removed old folder: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_6
+2025-11-19 19:28:41,462 - INFO - Total classes found in Test: 16
+2025-11-19 19:28:41,462 - INFO - Moved Baked Potato to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_1
+2025-11-19 19:28:41,462 - INFO - Moved Crispy Chicken to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_1
+2025-11-19 19:28:41,462 - INFO - Moved Donut to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_1
+2025-11-19 19:28:41,462 - INFO - Moved Fries to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_2
+2025-11-19 19:28:41,462 - INFO - Moved Hot Dog to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_2
+2025-11-19 19:28:41,472 - INFO - Moved apple_pie to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_2
+2025-11-19 19:28:41,472 - INFO - Moved burger to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_3
+2025-11-19 19:28:41,475 - INFO - Moved butter_naan to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_3
+2025-11-19 19:28:41,475 - INFO - Moved chai to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_3
+2025-11-19 19:28:41,475 - INFO - Moved chapati to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_4
+2025-11-19 19:28:41,475 - INFO - Moved cheesecake to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_4
+2025-11-19 19:28:41,482 - INFO - Moved chicken_curry to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_4
+2025-11-19 19:28:41,482 - INFO - Moved chole_bhature to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_5
+2025-11-19 19:28:41,482 - INFO - Moved dal_makhani to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_5
+2025-11-19 19:28:41,482 - INFO - Moved dhokla to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_5
+2025-11-19 19:28:41,490 - INFO - Moved fried_rice to C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_6
+2025-11-19 19:28:41,491 - INFO - Test data grouped into 6 folders successfully.
+2025-11-19 19:28:41,491 - INFO - Grouping completed for Train, Validation, and Test with unique non-repeating classes.
+2025-11-19 19:28:41,491 - INFO - ------- Train Data -------
+2025-11-19 19:28:41,492 - INFO - Group_1 -> Total Classes: 3
+2025-11-19 19:28:41,492 - INFO -     - Baked Potato
+2025-11-19 19:28:41,492 - INFO -     - Crispy Chicken
+2025-11-19 19:28:41,492 - INFO -     - Donut
+2025-11-19 19:28:41,492 - INFO - Group_2 -> Total Classes: 3
+2025-11-19 19:28:41,492 - INFO -     - Fries
+2025-11-19 19:28:41,492 - INFO -     - Hot Dog
+2025-11-19 19:28:41,492 - INFO -     - apple_pie
+2025-11-19 19:28:41,492 - INFO - Group_3 -> Total Classes: 3
+2025-11-19 19:28:41,492 - INFO -     - burger
+2025-11-19 19:28:41,492 - INFO -     - butter_naan
+2025-11-19 19:28:41,492 - INFO -     - chai
+2025-11-19 19:28:41,492 - INFO - Group_4 -> Total Classes: 3
+2025-11-19 19:28:41,492 - INFO -     - chapati
+2025-11-19 19:28:41,492 - INFO -     - cheesecake
+2025-11-19 19:28:41,492 - INFO -     - chicken_curry
+2025-11-19 19:28:41,492 - INFO - Group_5 -> Total Classes: 3
+2025-11-19 19:28:41,492 - INFO -     - chole_bhature
+2025-11-19 19:28:41,492 - INFO -     - dal_makhani
+2025-11-19 19:28:41,492 - INFO -     - dhokla
+2025-11-19 19:28:41,496 - INFO - Group_6 -> Total Classes: 1
+2025-11-19 19:28:41,496 - INFO -     - fried_rice
+2025-11-19 19:28:41,496 - INFO - ------- Validation Data -------
+2025-11-19 19:28:41,496 - INFO - Group_1 -> Total Classes: 3
+2025-11-19 19:28:41,496 - INFO -     - Baked Potato
+2025-11-19 19:28:41,496 - INFO -     - Crispy Chicken
+2025-11-19 19:28:41,496 - INFO -     - Donut
+2025-11-19 19:28:41,496 - INFO - Group_2 -> Total Classes: 3
+2025-11-19 19:28:41,496 - INFO -     - Fries
+2025-11-19 19:28:41,496 - INFO -     - Hot Dog
+2025-11-19 19:28:41,496 - INFO -     - apple_pie
+2025-11-19 19:28:41,496 - INFO - Group_3 -> Total Classes: 3
+2025-11-19 19:28:41,496 - INFO -     - burger
+2025-11-19 19:28:41,496 - INFO -     - butter_naan
+2025-11-19 19:28:41,496 - INFO -     - chai
+2025-11-19 19:28:41,496 - INFO - Group_4 -> Total Classes: 3
+2025-11-19 19:28:41,496 - INFO -     - chapati
+2025-11-19 19:28:41,496 - INFO -     - cheesecake
+2025-11-19 19:28:41,496 - INFO -     - chicken_curry
+2025-11-19 19:28:41,496 - INFO - Group_5 -> Total Classes: 3
+2025-11-19 19:28:41,496 - INFO -     - chole_bhature
+2025-11-19 19:28:41,496 - INFO -     - dal_makhani
+2025-11-19 19:28:41,496 - INFO -     - dhokla
+2025-11-19 19:28:41,496 - INFO - Group_6 -> Total Classes: 1
+2025-11-19 19:28:41,496 - INFO -     - fried_rice
+2025-11-19 19:28:41,496 - INFO - ------- Test Data -------
+2025-11-19 19:28:41,500 - INFO - Group_1 -> Total Classes: 3
+2025-11-19 19:28:41,500 - INFO -     - Baked Potato
+2025-11-19 19:28:41,500 - INFO -     - Crispy Chicken
+2025-11-19 19:28:41,500 - INFO -     - Donut
+2025-11-19 19:28:41,500 - INFO - Group_2 -> Total Classes: 3
+2025-11-19 19:28:41,500 - INFO -     - Fries
+2025-11-19 19:28:41,500 - INFO -     - Hot Dog
+2025-11-19 19:28:41,500 - INFO -     - apple_pie
+2025-11-19 19:28:41,500 - INFO - Group_3 -> Total Classes: 3
+2025-11-19 19:28:41,500 - INFO -     - burger
+2025-11-19 19:28:41,501 - INFO -     - butter_naan
+2025-11-19 19:28:41,501 - INFO -     - chai
+2025-11-19 19:28:41,501 - INFO - Group_4 -> Total Classes: 3
+2025-11-19 19:28:41,501 - INFO -     - chapati
+2025-11-19 19:28:41,501 - INFO -     - cheesecake
+2025-11-19 19:28:41,501 - INFO -     - chicken_curry
+2025-11-19 19:28:41,501 - INFO - Group_5 -> Total Classes: 3
+2025-11-19 19:28:41,501 - INFO -     - chole_bhature
+2025-11-19 19:28:41,501 - INFO -     - dal_makhani
+2025-11-19 19:28:41,501 - INFO -     - dhokla
+2025-11-19 19:28:41,501 - INFO - Group_6 -> Total Classes: 1
+2025-11-19 19:28:41,501 - INFO -     - fried_rice
+2025-11-19 19:29:29,681 - INFO - Custom Model predicts: Baked Potato
+2025-11-19 19:29:33,032 - INFO - ResNet-50 predicts: Donut
+2025-11-19 19:29:33,874 - INFO - VGG-16 predicts: Baked Potato
+2025-11-19 19:29:36,414 - INFO - Starting evaluation of all .h5 models...
+2025-11-19 19:29:36,415 - INFO - ____________
+2025-11-19 19:29:36,415 - INFO - Custom Model
+2025-11-19 19:29:36,415 - INFO - ____________
+2025-11-19 19:29:36,415 - INFO - 
+Group 1: train_group1.h5
+2025-11-19 19:29:36,415 - INFO - ____________
+2025-11-19 19:29:42,892 - INFO - Train Accuracy: 0.8889
+2025-11-19 19:29:42,894 - INFO - Validation Accuracy: 0.8833
+2025-11-19 19:29:42,894 - INFO - Test Accuracy: 0.9167
+2025-11-19 19:29:42,894 - INFO - 
+Confusion Matrix:
+2025-11-19 19:29:42,894 - INFO - 
+[[35  5  0]
+ [ 1 37  2]
+ [ 1  1 38]]
+2025-11-19 19:29:42,894 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:29:42,894 - INFO - Baked Potato  TP=35, FP=2, FN=5, TN=78
+2025-11-19 19:29:42,894 - INFO - Crispy Chicken  TP=37, FP=6, FN=3, TN=74
+2025-11-19 19:29:42,894 - INFO - Donut  TP=38, FP=2, FN=2, TN=78
+2025-11-19 19:29:42,894 - INFO - 
+Classification Report:
+2025-11-19 19:29:42,903 - INFO - 
+                precision    recall  f1-score   support
+
+  Baked Potato       0.95      0.88      0.91        40
+Crispy Chicken       0.86      0.93      0.89        40
+         Donut       0.95      0.95      0.95        40
+
+      accuracy                           0.92       120
+     macro avg       0.92      0.92      0.92       120
+  weighted avg       0.92      0.92      0.92       120
+
+2025-11-19 19:29:42,904 - INFO - 
+Group 2: train_group10.h5
+2025-11-19 19:29:42,904 - INFO - ____________
+2025-11-19 19:29:47,475 - INFO - Train Accuracy: 0.2542
+2025-11-19 19:29:47,477 - INFO - Validation Accuracy: 0.2375
+2025-11-19 19:29:47,477 - INFO - Test Accuracy: 0.1750
+2025-11-19 19:29:47,479 - INFO - 
+Confusion Matrix:
+2025-11-19 19:29:47,479 - INFO - 
+[[ 8  5 27]
+ [ 0  0  0]
+ [27  7  6]]
+2025-11-19 19:29:47,479 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:29:47,479 - INFO - Fries  TP=8, FP=27, FN=32, TN=13
+2025-11-19 19:29:47,479 - INFO - Hot Dog  TP=0, FP=12, FN=0, TN=68
+2025-11-19 19:29:47,479 - INFO - apple_pie  TP=6, FP=27, FN=34, TN=13
+2025-11-19 19:29:47,479 - INFO - 
+Classification Report:
+2025-11-19 19:29:47,485 - INFO - 
+              precision    recall  f1-score   support
+
+       Fries       0.23      0.20      0.21        40
+     Hot Dog       0.00      0.00      0.00         0
+   apple_pie       0.18      0.15      0.16        40
+
+    accuracy                           0.17        80
+   macro avg       0.14      0.12      0.13        80
+weighted avg       0.21      0.17      0.19        80
+
+2025-11-19 19:29:47,485 - INFO - 
+Group 3: train_group11.h5
+2025-11-19 19:29:47,485 - INFO - ____________
+2025-11-19 19:29:57,773 - INFO - Train Accuracy: 0.4194
+2025-11-19 19:29:57,777 - INFO - Validation Accuracy: 0.3250
+2025-11-19 19:29:57,777 - INFO - Test Accuracy: 0.3417
+2025-11-19 19:29:57,781 - INFO - 
+Confusion Matrix:
+2025-11-19 19:29:57,783 - INFO - 
+[[17 20  3  0]
+ [12 10 13  5]
+ [10  0 14 16]
+ [ 0  0  0  0]]
+2025-11-19 19:29:57,784 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:29:57,784 - INFO - burger  TP=17, FP=22, FN=23, TN=58
+2025-11-19 19:29:57,784 - INFO - butter_naan  TP=10, FP=20, FN=30, TN=60
+2025-11-19 19:29:57,784 - INFO - chai  TP=14, FP=16, FN=26, TN=64
+2025-11-19 19:29:57,784 - INFO - 
+Classification Report:
+2025-11-19 19:29:57,807 - INFO - 
+              precision    recall  f1-score   support
+
+      burger       0.44      0.42      0.43        40
+ butter_naan       0.33      0.25      0.29        40
+        chai       0.47      0.35      0.40        40
+
+   micro avg       0.41      0.34      0.37       120
+   macro avg       0.41      0.34      0.37       120
+weighted avg       0.41      0.34      0.37       120
+
+2025-11-19 19:29:57,809 - INFO - 
+Group 4: train_group2.h5
+2025-11-19 19:29:57,809 - INFO - ____________
+2025-11-19 19:30:09,482 - INFO - Train Accuracy: 0.3556
+2025-11-19 19:30:09,484 - INFO - Validation Accuracy: 0.3500
+2025-11-19 19:30:09,484 - INFO - Test Accuracy: 0.2833
+2025-11-19 19:30:09,490 - INFO - 
+Confusion Matrix:
+2025-11-19 19:30:09,490 - INFO - 
+[[ 3 11 26]
+ [ 6 18 16]
+ [14 13 13]]
+2025-11-19 19:30:09,490 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:30:09,490 - INFO - chapati  TP=3, FP=20, FN=37, TN=60
+2025-11-19 19:30:09,490 - INFO - cheesecake  TP=18, FP=24, FN=22, TN=56
+2025-11-19 19:30:09,490 - INFO - chicken_curry  TP=13, FP=42, FN=27, TN=38
+2025-11-19 19:30:09,490 - INFO - 
+Classification Report:
+2025-11-19 19:30:09,514 - INFO - 
+               precision    recall  f1-score   support
+
+      chapati       0.13      0.07      0.10        40
+   cheesecake       0.43      0.45      0.44        40
+chicken_curry       0.24      0.33      0.27        40
+
+     accuracy                           0.28       120
+    macro avg       0.27      0.28      0.27       120
+ weighted avg       0.27      0.28      0.27       120
+
+2025-11-19 19:30:09,514 - INFO - 
+Group 5: train_group3.h5
+2025-11-19 19:30:09,514 - INFO - ____________
+2025-11-19 19:30:17,451 - INFO - Train Accuracy: 0.2917
+2025-11-19 19:30:17,457 - INFO - Validation Accuracy: 0.3000
+2025-11-19 19:30:17,457 - INFO - Test Accuracy: 0.3083
+2025-11-19 19:30:17,457 - INFO - 
+Confusion Matrix:
+2025-11-19 19:30:17,457 - INFO - 
+[[12 15 13]
+ [10 16 14]
+ [21 10  9]]
+2025-11-19 19:30:17,457 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:30:17,457 - INFO - chole_bhature  TP=12, FP=31, FN=28, TN=49
+2025-11-19 19:30:17,457 - INFO - dal_makhani  TP=16, FP=25, FN=24, TN=55
+2025-11-19 19:30:17,457 - INFO - dhokla  TP=9, FP=27, FN=31, TN=53
+2025-11-19 19:30:17,457 - INFO - 
+Classification Report:
+2025-11-19 19:30:17,464 - INFO - 
+               precision    recall  f1-score   support
+
+chole_bhature       0.28      0.30      0.29        40
+  dal_makhani       0.39      0.40      0.40        40
+       dhokla       0.25      0.23      0.24        40
+
+     accuracy                           0.31       120
+    macro avg       0.31      0.31      0.31       120
+ weighted avg       0.31      0.31      0.31       120
+
+2025-11-19 19:30:17,464 - INFO - 
+Group 6: train_group4.h5
+2025-11-19 19:30:17,464 - INFO - ____________
+2025-11-19 19:30:20,224 - INFO - Train Accuracy: 0.2583
+2025-11-19 19:30:20,229 - INFO - Validation Accuracy: 0.3000
+2025-11-19 19:30:20,229 - INFO - Test Accuracy: 0.2000
+2025-11-19 19:30:20,229 - INFO - 
+Confusion Matrix:
+2025-11-19 19:30:20,229 - INFO - 
+[[ 8 32]
+ [ 0  0]]
+2025-11-19 19:30:20,232 - INFO - 
+Class-wise Performance (TP / FP / FN / TN):
+2025-11-19 19:30:20,232 - INFO - fried_rice  TP=8, FP=0, FN=32, TN=0
+2025-11-19 19:30:20,232 - INFO - 
+Classification Report:
+2025-11-19 19:30:20,238 - INFO - 
+              precision    recall  f1-score   support
+
+  fried_rice       1.00      0.20      0.33        40
+
+   micro avg       1.00      0.20      0.33        40
+   macro avg       1.00      0.20      0.33        40
+weighted avg       1.00      0.20      0.33        40
+
+2025-11-19 19:30:20,239 - INFO - 
+Group 7: train_group5.h5
+2025-11-19 19:30:20,239 - INFO - ____________
+2025-11-19 19:30:20,522 - ERROR - Error in models_loading on line 349 because [WinError 3] The system cannot find the path specified: 'C:\\INTERNSHIP_VIHARATECH\\INTERN_PR2\\Split_data\\Train\\Group_7'
+2025-11-19 19:30:20,522 - INFO - ===== STARTING PERFORMANCE JSON GENERATION =====
+2025-11-19 19:30:20,522 - INFO - Checking model folder: VGG-16 -> C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models
+2025-11-19 19:30:20,522 - INFO -   Processing Group: Group_1
+2025-11-19 19:30:20,528 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group1.h5
+2025-11-19 19:30:20,736 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:30:49,471 - INFO -   Completed evaluation for VGG-16 - Group_1
+2025-11-19 19:30:49,471 - INFO -   Processing Group: Group_2
+2025-11-19 19:30:49,477 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group2.h5
+2025-11-19 19:30:50,156 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:31:04,276 - INFO -   Completed evaluation for VGG-16 - Group_2
+2025-11-19 19:31:04,276 - INFO -   Processing Group: Group_3
+2025-11-19 19:31:04,276 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group3.h5
+2025-11-19 19:31:04,575 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:31:19,092 - INFO -   Completed evaluation for VGG-16 - Group_3
+2025-11-19 19:31:19,092 - INFO -   Processing Group: Group_4
+2025-11-19 19:31:19,092 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group4.h5
+2025-11-19 19:31:19,374 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:31:35,141 - INFO -   Completed evaluation for VGG-16 - Group_4
+2025-11-19 19:31:35,141 - INFO -   Processing Group: Group_5
+2025-11-19 19:31:35,141 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group5.h5
+2025-11-19 19:31:35,442 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:31:58,032 - INFO -   Completed evaluation for VGG-16 - Group_5
+2025-11-19 19:31:58,032 - INFO -   Processing Group: Group_6
+2025-11-19 19:31:58,033 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\vgg16_models\vgg16_group6.h5
+2025-11-19 19:31:58,704 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:32:09,849 - ERROR -   Failed to produce classification report for Group_6: Number of classes, 3, does not match size of target_names, 1. Try specifying the labels parameter
+2025-11-19 19:32:09,851 - INFO -   Completed evaluation for VGG-16 - Group_6
+2025-11-19 19:32:09,851 - INFO -   Processing Group: Group_7
+2025-11-19 19:32:09,852 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_7. Skipping group.
+2025-11-19 19:32:09,852 - INFO -   Processing Group: Group_8
+2025-11-19 19:32:09,852 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_8. Skipping group.
+2025-11-19 19:32:09,854 - INFO -   Processing Group: Group_9
+2025-11-19 19:32:09,854 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_9. Skipping group.
+2025-11-19 19:32:09,854 - INFO -   Processing Group: Group_10
+2025-11-19 19:32:09,854 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_10. Skipping group.
+2025-11-19 19:32:09,855 - INFO -   Processing Group: Group_11
+2025-11-19 19:32:09,855 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_11. Skipping group.
+2025-11-19 19:32:09,855 - INFO - Checking model folder: ResNet-50 -> C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models
+2025-11-19 19:32:09,857 - INFO -   Processing Group: Group_1
+2025-11-19 19:32:09,857 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group1_.h5
+2025-11-19 19:32:13,759 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:32:35,787 - INFO -   Completed evaluation for ResNet-50 - Group_1
+2025-11-19 19:32:35,789 - INFO -   Processing Group: Group_2
+2025-11-19 19:32:35,789 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group2_.h5
+2025-11-19 19:32:38,950 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:32:51,856 - ERROR -   Failed to produce classification report for Group_2: Number of classes, 2, does not match size of target_names, 3. Try specifying the labels parameter
+2025-11-19 19:32:51,862 - INFO -   Completed evaluation for ResNet-50 - Group_2
+2025-11-19 19:32:51,862 - INFO -   Processing Group: Group_3
+2025-11-19 19:32:51,862 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group3_.h5
+2025-11-19 19:32:54,957 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:33:16,832 - INFO -   Completed evaluation for ResNet-50 - Group_3
+2025-11-19 19:33:16,832 - INFO -   Processing Group: Group_4
+2025-11-19 19:33:16,832 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group4_.h5
+2025-11-19 19:33:19,830 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:33:41,503 - INFO -   Completed evaluation for ResNet-50 - Group_4
+2025-11-19 19:33:41,503 - INFO -   Processing Group: Group_5
+2025-11-19 19:33:41,503 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group5_.h5
+2025-11-19 19:33:44,672 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:06,439 - INFO -   Completed evaluation for ResNet-50 - Group_5
+2025-11-19 19:34:06,441 - INFO -   Processing Group: Group_6
+2025-11-19 19:34:06,442 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\resnet50_models\resnet50_group6_.h5
+2025-11-19 19:34:09,933 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:24,049 - ERROR -   Failed to produce classification report for Group_6: Number of classes, 2, does not match size of target_names, 1. Try specifying the labels parameter
+2025-11-19 19:34:24,049 - INFO -   Completed evaluation for ResNet-50 - Group_6
+2025-11-19 19:34:24,051 - INFO -   Processing Group: Group_7
+2025-11-19 19:34:24,051 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_7. Skipping group.
+2025-11-19 19:34:24,051 - INFO -   Processing Group: Group_8
+2025-11-19 19:34:24,051 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_8. Skipping group.
+2025-11-19 19:34:24,051 - INFO -   Processing Group: Group_9
+2025-11-19 19:34:24,053 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_9. Skipping group.
+2025-11-19 19:34:24,053 - INFO -   Processing Group: Group_10
+2025-11-19 19:34:24,053 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_10. Skipping group.
+2025-11-19 19:34:24,053 - INFO -   Processing Group: Group_11
+2025-11-19 19:34:24,055 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_11. Skipping group.
+2025-11-19 19:34:24,055 - INFO - Checking model folder: Custom Model -> C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models
+2025-11-19 19:34:24,055 - INFO -   Processing Group: Group_1
+2025-11-19 19:34:24,055 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group1.h5
+2025-11-19 19:34:24,719 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:27,546 - INFO -   Completed evaluation for Custom Model - Group_1
+2025-11-19 19:34:27,546 - INFO -   Processing Group: Group_2
+2025-11-19 19:34:27,546 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group2.h5
+2025-11-19 19:34:28,192 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:30,112 - INFO -   Completed evaluation for Custom Model - Group_2
+2025-11-19 19:34:30,112 - INFO -   Processing Group: Group_3
+2025-11-19 19:34:30,112 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group3.h5
+2025-11-19 19:34:30,752 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:33,587 - INFO -   Completed evaluation for Custom Model - Group_3
+2025-11-19 19:34:33,588 - INFO -   Processing Group: Group_4
+2025-11-19 19:34:33,588 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group4.h5
+2025-11-19 19:34:34,247 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:36,973 - INFO -   Completed evaluation for Custom Model - Group_4
+2025-11-19 19:34:36,973 - INFO -   Processing Group: Group_5
+2025-11-19 19:34:36,973 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group5.h5
+2025-11-19 19:34:37,674 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:40,778 - INFO -   Completed evaluation for Custom Model - Group_5
+2025-11-19 19:34:40,779 - INFO -   Processing Group: Group_6
+2025-11-19 19:34:40,779 - INFO -   Loading model: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\custom_models\train_group6.h5
+2025-11-19 19:34:41,411 - INFO -   Using target image size: 256x256 for predictions
+2025-11-19 19:34:43,029 - ERROR -   Failed to produce classification report for Group_6: Number of classes, 3, does not match size of target_names, 1. Try specifying the labels parameter
+2025-11-19 19:34:43,029 - INFO -   Completed evaluation for Custom Model - Group_6
+2025-11-19 19:34:43,029 - INFO -   Processing Group: Group_7
+2025-11-19 19:34:43,029 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_7. Skipping group.
+2025-11-19 19:34:43,033 - INFO -   Processing Group: Group_8
+2025-11-19 19:34:43,033 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_8. Skipping group.
+2025-11-19 19:34:43,034 - INFO -   Processing Group: Group_9
+2025-11-19 19:34:43,034 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_9. Skipping group.
+2025-11-19 19:34:43,035 - INFO -   Processing Group: Group_10
+2025-11-19 19:34:43,035 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_10. Skipping group.
+2025-11-19 19:34:43,036 - INFO -   Processing Group: Group_11
+2025-11-19 19:34:43,036 - WARNING -   Test folder missing: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\Split_data\Test\Group_11. Skipping group.
+2025-11-19 19:34:43,045 - INFO - ===== JSON CREATED: C:\INTERNSHIP_VIHARATECH\INTERN_PR2\model_performance.json =====

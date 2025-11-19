@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Classifier UI</title>
+
+  <!-- load JS deferred so DOM exists -->
+  <script defer src="{{ url_for('static', filename='main.js') }}"></script>
+
+  <style>
+    :root{
+      --bg:#f0f4f8;
+      --left-bg: linear-gradient(135deg,#ff9a9e,#fad0c4);
+      --middle-bg:#d0f4fd;
+      --right-bg:#e2f0d9;
+      --accent:#4f46e5;
+      --button-bg:#f472b6;
+      --button-hover:#ec4899;
+      --text:#1f2937;
+      --muted:#4b5563;
+    }
+    *{box-sizing:border-box;font-family:Inter,Arial,sans-serif;margin:0;padding:0}
+    html,body{height:100%;background:var(--bg);color:var(--text)}
+    .container{display:grid;grid-template-columns:300px 1.5fr 400px;gap:20px;height:100vh;padding:20px;}
+
+    /* LEFT PANEL */
+    .card-left{background:var(--left-bg);border-radius:16px;display:flex;flex-direction:column;align-items:center;gap:16px;color:#fff;overflow:hidden;padding:20px;}
+    .profile-img{width:180px;height:180px;border-radius:16px;background:#ffffff;background-size:cover;background-position:center;border:4px solid #fff;}
+    #user-name{width:100%;padding:10px;border-radius:10px;border:none;text-align:center;font-weight:600;}
+    #user-details{width:100%;resize:none;font-weight:normal;font-size:14px;flex-grow:1;padding:15px;border-radius:10px;border:none;margin-top:10px;overflow-y:auto;line-height:1.5;}
+    .muted{font-size:13px;color:#fff;text-align:center;}
+
+    /* MIDDLE PANEL */
+    .card-middle{background:var(--middle-bg);border-radius:16px;padding:20px;display:flex;flex-direction:column;}
+    .upload-inner{background:#ffffff;border-radius:16px;padding:24px;flex-grow:1;display:flex;flex-direction:column;gap:16px;min-height:220px;}
+    .pretext{font-size:16px;color:var(--muted);text-align:center}
+    .drop-area{margin:0 auto;padding:30px;border-radius:20px;border:2px dashed #93c5fd;cursor:pointer;transition:all .2s;max-width:100%;display:flex;align-items:center;justify-content:center;background:#f0f9ff;min-height:160px}
+    .drop-area img{max-width:100%;max-height:350px;border-radius:12px}
+    #image-url{width:100%;padding:8px;border-radius:8px;border:1px solid #d1d5db}
+    button#load-url{margin-top:8px;padding:8px 20px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+    .class-list-inline{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .class-item{padding:8px 14px;border-radius:10px;border:1px solid #93c5fd;font-size:13px;background:#e0f2fe}
+
+    .models-row{display:flex;justify-content:center;gap:20px;margin-top:6px;align-items:center}
+    .model-btn{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:3px solid #d1d5db;cursor:pointer;background:#f0f9ff;font-weight:bold;font-size:14px}
+    .model-btn.selected{border-color:var(--accent);background:#a5b4fc}
+    #predict{padding:14px 42px;border-radius:12px;border:none;background:var(--button-bg);color:#fff;font-weight:600;cursor:pointer;margin:12px auto 0;display:block}
+    #predict:hover{background:var(--button-hover)}
+
+    /* RIGHT PANEL */
+    .card-right{background:var(--right-bg);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px;}
+    #classes-box{display:none;flex-wrap:wrap;gap:8px;background:#ffffffaa;padding:10px;border-radius:10px;margin-top:8px}
+    #class-list-full{display:flex;flex-wrap:wrap;gap:8px}
+
+    .prediction-box{background:#ffffff; border-radius:12px; padding:15px; border:2px solid #93c5fd; margin-top:10px;}
+    .metrics-box{background:#e0f7fa; border-radius:10px; padding:10px; margin-top:8px; display:flex; flex-direction:column; gap:6px;}
+
+    .analysis{background:#fff7d4;border:1px solid #facc15;padding:10px;border-radius:10px;max-height:200px;overflow-y:auto;margin-top:10px;white-space:pre-wrap;}
+
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    table td,table th{border:1px solid #d1fae5;padding:8px}
+
+    /* small screens */
+    @media (max-width:1000px){.container{grid-template-columns:1fr;grid-auto-rows:auto}}
+    #class-preview {
+      display: none;
+    }
+
+    /* Project Details Rectangle Box */
+    .project-details {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient */
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-details .project-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ff0000; /* Red */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- LEFT (unchanged profile content) -->
+  <aside class="card-left">
+    <div class="profile-img" style="background-image: url('/static/your_photo.jpeg.jpeg');"></div>
+    <input id="user-name" type="text" value="Nagalakshmi Ragolu" style="color:red; font-size:20px; font-weight:bold;">
+    <textarea id="user-details" rows="12">
+Education:
+B.Tech
+Department: Information Technology
+College: Aditya Institute of Technology and Management
+Year of Passing: 2021-2025
+CCPA: 8.13
+Relevant Courses: Data Structures & Algorithms, Database Management, Software Engineering, AI & ML, Cloud Computing
+
+Skills:
+- Machine Learning (ML)
+- Deep Learning (DL)
+- Generative AI (GenAI)
+- Computer Vision (CV)
+- Python (NumPy, Pandas, Matplotlib)
+- OpenCV
+- TensorFlow
+- Tableau
+- Excel (Advanced)
+- AIML, PowerBI
+- Data manipulation and visualization
+
+Profile Summary:
+Highly motivated and detail-oriented Data Analyst with strong analytical and problem-solving skills. Experienced in processing, analyzing, and visualizing data to generate actionable insights. Enthusiastic about leveraging data to support decision-making and continuously learning new technologies and tools.
+    </textarea>
+    <div class="muted">Profile image loaded from upload area or URL</div>
+  </aside>
+
+  <!-- MIDDLE (upload area) -->
+  <main class="card-middle">
+    <div class="upload-inner">
+      <div class="pretext">Upload your image. Only upload classes which are mentioned in the class list and URL.</div>
+
+      <div id="drop-area" class="drop-area">
+        <input id="image-input" type="file" accept="image/*" style="display:none">
+        <div id="drop-content"><p id="drop-text">Click or drop image to upload</p></div>
+      </div>
+
+      <div>
+        <label for="image-url"><small>Or enter image URL:</small></label>
+        <input id="image-url" type="text" placeholder="https://...">
+        <button id="load-url">Load</button>
+      </div>
+
+      <div class="class-list-inline" id="class-preview"></div>
+
+      <div class="models-row">
+        <div class="model-circle"><div id="model-custom" class="model-btn selected" data-model="Custom">Custom</div><div style="text-align:center;font-size:12px;margin-top:6px">Custom</div></div>
+        <div class="model-circle"><div id="model-resnet" class="model-btn" data-model="ResNet">ResNet</div><div style="text-align:center;font-size:12px;margin-top:6px">ResNet</div></div>
+        <div class="model-circle"><div id="model-vgg" class="model-btn" data-model="VGG">VGG</div><div style="text-align:center;font-size:12px;margin-top:6px">VGG</div></div>
+      </div>
+    </div>
+
+      <!-- INSERT PROJECT DETAILS BOX HERE -->
+    <div class="project-details">
+      <h2 class="project-title">Deep Learning Food Classifier</h2>
+      <p>
+        Task: Classify 34 food categories using multiple deep learning models (Custom, VGG16, ResNet).<br>
+        Features: Image upload and URL input for prediction.<br>
+        Model Selection: Choose between Custom, ResNet, or VGG16 models.<br>
+        Prediction Output: Display predicted class with nutrition information.<br>
+        Metrics: Show Accuracy, Precision, Recall, F1-score, TP, FP, FN.<br>
+        Deployment: Flask Web Application with a user-friendly interface.
+      </p>
+    </div>
+
+    <button id="predict">Predict</button>
+  </main>
+
+  <!-- RIGHT -->
+  <aside class="card-right">
+    <div>
+      <h3>Class List</h3>
+      <div id="toggle-classes" class="collapsible" style="cursor:pointer">Show classes ▾</div>
+      <div id="classes-box">
+        <div id="class-list-full"></div>
+      </div>
+    </div>
+
+    <!-- Prediction Output Box -->
+    <div class="prediction-box">
+      <h3>Prediction Output</h3>
+      <p><strong>Model:</strong> <span id="out-model">-</span></p>
+      <p><strong>Group:</strong> <span id="out-group">-</span></p>
+      <p><strong>Class:</strong> <span id="out-class">-</span></p>
+      <p><strong>Nutrition:</strong> <span id="out-nutrition">-</span></p>
+
+      <!-- Metrics inside box -->
+      <div class="metrics-box">
+        <p><strong>Accuracy:</strong> <span id="out-acc">-</span></p>
+        <p><strong>Precision:</strong> <span id="out-prec">-</span></p>
+        <p><strong>Recall:</strong> <span id="out-rec">-</span></p>
+        <p><strong>F1-score:</strong> <span id="out-f1">-</span></p>
+      </div>
+
+      <!-- Analysis inside same box -->
+      <div class="analysis" id="out-analysis">-</div>
+    </div>
+
+    <table>
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>F1 (%)</td><td id="m-f1">-</td></tr>
+      <tr><td>FP</td><td id="m-fp">-</td></tr>
+      <tr><td>FN</td><td id="m-fn">-</td></tr>
+      <tr><td>TP</td><td id="m-tp">-</td></tr>
+    </table>
+  </aside>
+</div>
+</body>
+</html>

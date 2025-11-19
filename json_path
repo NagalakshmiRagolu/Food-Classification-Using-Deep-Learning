@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Classifier UI</title>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+<style>
+:root {
+  --bg: #f0f4f8;
+  --left-bg: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  --middle-bg: #d0f4fd;
+  --right-bg: #e2f0d9;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --button-bg: #f472b6;
+  --button-hover: #ec4899;
+}
+
+* { box-sizing: border-box; font-family: 'Inter', Arial, sans-serif; margin:0; padding:0;}
+html, body { height:100%; background: var(--bg); color: var(--text); }
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 1.5fr 400px;
+  gap: 20px;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* LEFT PANEL */
+.card-left {
+  background: var(--left-bg);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  background: #ffffff;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #fff;
+}
+
+#user-name {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+#user-details {
+  width: 100%;
+  resize: none;
+  font-weight: normal;
+  font-size: 14px;
+  flex-grow: 1;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.muted { font-size: 13px; color: #fff; text-align: center; }
+
+/* MIDDLE PANEL */
+.card-middle {
+  background: var(--middle-bg);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.upload-inner {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.upload-inner .pretext {
+  font-size: 16px;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.drop-area {
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px dashed #93c5fd;
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f9ff;
+}
+
+.drop-area:hover { border-color: var(--accent); }
+.drop-area img { max-width: 100%; max-height: 350px; border-radius: 16px; }
+
+#image-url {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+button#load-url {
+  margin-top: 8px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.class-list-inline { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.class-item { padding: 8px 14px; border-radius: 10px; border: 1px solid #93c5fd; font-size: 13px; background: #e0f2fe; }
+
+.models-row { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
+.model-circle { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.model-btn {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #f0f9ff;
+  font-weight: bold;
+  font-size: 16px;
+}
+.model-btn.selected { border-color: var(--accent); background: #a5b4fc; box-shadow: 0 10px 30px rgba(79,70,229,0.2);}
+.model-btn:hover { transform: scale(1.08); }
+
+button#predict {
+  padding: 18px 60px;
+  border-radius: 14px;
+  border: none;
+  background: var(--button-bg);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  transition: all 0.3s;
+}
+button#predict:hover { background: var(--button-hover); }
+
+/* RIGHT PANEL */
+.card-right {
+  background: var(--right-bg);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#classes-box, #class-list-full {
+  flex-wrap: wrap;
+}
+
+.analysis { background: #fef3c7; padding: 10px; border-radius: 8px; white-space: pre-wrap; flex-grow: 1; overflow-y: auto; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+table td, table th { border: 1px solid #d1fae5; padding: 8px; }
+
+/* Responsive */
+@media(max-width:1000px){
+  .container{grid-template-columns:1fr;grid-auto-rows:auto;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- LEFT -->
+  <aside class="card-left">
+    <div class="profile-img" style="background-image: url('/static/your_photo.jpeg.jpeg');"></div>
+    <input id="user-name" type="text" value="Nagalakshmi Ragholu">
+    <textarea id="user-details" rows="12">
+Education:
+B.Tech
+Department: Information Technology
+College: Aditya Institute of Technology and Management
+Year of Passing: 2021-2025
+CCPA: 8.13
+Relevant Courses: Data Structures & Algorithms, Database Management, Software Engineering, AI & ML, Cloud Computing
+
+Skills:
+- Machine Learning (ML)
+- Deep Learning (DL)
+- Generative AI (GenAI)
+- Computer Vision (CV)
+- Python (NumPy, Pandas, Matplotlib)
+- OpenCV
+- TensorFlow
+- Tableau
+- Excel (Advanced)
+- AML, BL, PowerApps
+- Data manipulation and visualization
+
+Profile Summary:
+Highly motivated and detail-oriented Data Analyst with strong analytical and problem-solving skills. Experienced in processing, analyzing, and visualizing data to generate actionable insights. Enthusiastic about leveraging data to support decision-making and continuously learning new technologies and tools.
+    </textarea>
+    <div class="muted">Profile image loaded from upload area or URL</div>
+  </aside>
+
+  <!-- MIDDLE -->
+  <main class="card-middle">
+    <div class="upload-inner">
+      <div class="pretext">Upload your image. Only upload classes which are mentioned in the class list and URL.</div>
+      <div id="drop-area" class="drop-area">
+        <input id="image-input" type="file" accept="image/*" style="display:none">
+        <div id="drop-content"><p id="drop-text">Click or drop image to upload</p></div>
+      </div>
+      <div>
+        <label for="image-url"><small>Or enter image URL:</small></label>
+        <input id="image-url" type="text" placeholder="https://...">
+        <button id="load-url">Load</button>
+      </div>
+      <div class="class-list-inline" id="class-preview"></div>
+      <div class="models-row">
+        <div class="model-circle"><div id="model-custom" class="model-btn selected" data-model="Custom">Custom</div><div>Custom</div></div>
+        <div class="model-circle"><div id="model-resnet" class="model-btn" data-model="ResNet">ResNet</div><div>ResNet</div></div>
+        <div class="model-circle"><div id="model-vgg" class="model-btn" data-model="VGG">VGG</div><div>VGG</div></div>
+      </div>
+      <button id="predict">Predict</button>
+    </div>
+  </main>
+
+  <!-- RIGHT -->
+  <aside class="card-right">
+    <div>
+      <h3>Class List</h3>
+      <div id="toggle-classes" class="collapsible">Show classes ▾</div>
+      <div id="classes-box" style="margin-top:10px;display:none">
+        <div id="class-list-full" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+      </div>
+      <hr>
+      <h3>Prediction Output</h3>
+      <div>
+        <strong>Model:</strong> <span id="out-model">-</span><br>
+        <strong>Group:</strong> <span id="out-group">-</span><br>
+        <strong>Class:</strong> <span id="out-class">-</span><br>
+        <strong>Nutrition:</strong> <span id="out-nutrition">-</span>
+      </div>
+    </div>
+    <div class="analysis" id="out-analysis">-</div>
+    <table>
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>F1 (%)</td><td id="m-f1">-</td></tr>
+      <tr><td>FP</td><td id="m-fp">-</td></tr>
+      <tr><td>FN</td><td id="m-fn">-</td></tr>
+      <tr><td>TP</td><td id="m-tp">-</td></tr>
+    </table>
+  </aside>
+</div>
+
+<script>
+  let selectedFile = null;
+  let selectedModel = "Custom";
+  const imageInput = document.getElementById('image-input');
+  const dropArea = document.getElementById('drop-area');
+  const dropText = document.getElementById('drop-text');
+  const profileImg = document.querySelector('.profile-img');
+
+  dropArea.addEventListener('click', () => imageInput.click());
+  dropArea.addEventListener('dragover', e => { e.preventDefault(); dropArea.style.borderColor='#4f46e5'; });
+  dropArea.addEventListener('dragleave', () => { dropArea.style.borderColor='#93c5fd'; });
+  dropArea.addEventListener('drop', e => { e.preventDefault(); dropArea.style.borderColor='#93c5fd'; handleFile(e.dataTransfer.files[0]); });
+
+  imageInput.addEventListener('change', e => handleFile(e.target.files[0]));
+
+  function handleFile(f){
+    if(!f) return;
+    selectedFile = f;
+    const url = URL.createObjectURL(f);
+    dropText.innerHTML = `<img src="${url}">`;
+    profileImg.style.backgroundImage = `url(${url})`;
+  }
+
+  document.getElementById('load-url').addEventListener('click', ()=>{
+    const url = document.getElementById('image-url').value.trim();
+    if(!url) return alert('Enter an image URL');
+    selectedFile = null;
+    dropText.innerHTML = `<img src="${url}">`;
+    profileImg.style.backgroundImage = `url(${url})`;
+  });
+
+  document.querySelectorAll('.model-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.model-btn').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedModel = btn.dataset.model;
+    });
+  });
+</script>
+</body>
+</html>
