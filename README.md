@@ -1,131 +1,229 @@
-🍽️ Food Image Classification Using CNNs with Nutritional Analysis
-1. Project Overview
+#🍽️ Food Image Classification Using CNNs with Nutritional Analysis
+A deep learning project that classifies food images into 34 categories and automatically provides nutritional information (calories, protein, fat, carbohydrates, and fiber) for each predicted dish. This can support diet tracking, healthcare diet supervision, food recommendation systems, and smart kitchen/IoT applications.​
 
-Food classification using deep learning is an emerging domain in computer vision.
-The goal of this project is to automatically:
+📌 Table of Contents
+Project Overview
 
-Identify food items from images
+Key Features
 
-Provide nutritional information
+Food Classes (34 Categories)
 
-Assist in calorie tracking and diet analysis
+Concepts & Terminology (Clearly Defined)
 
-This system is useful for:
+Dataset & Nutritional Annotations
 
-Diet tracking & calorie monitoring
+Data Preprocessing & Augmentation
 
-Healthcare diet supervision
+Model Architectures (VGG‑16, ResNet‑50, Custom CNN)
 
-Food recommendation systems
+Training Setup & Metrics
 
-Smart kitchens & IoT devices
+Nutritional Analysis Pipeline
 
-The project includes three CNN models:
+Tech Stack & Library Explanations
 
-VGG-16 – deep architecture with strong accuracy
+Project Structure
 
-ResNet-50 – uses residual blocks, avoids vanishing gradients
+How to Run
 
-Custom CNN – lightweight architecture for real-time inference
+Future Work
 
-The pipeline includes preprocessing, augmentation, training, model evaluation, and JSON result generation.
+References
 
-2. Dataset Description
+Author
 
-The dataset contains 40+ food categories, each having 200+ images in JPG format.
+🧾 Project Overview
+The system takes a food image as input, predicts which dish it is using Convolutional Neural Networks (CNNs), and then looks up its nutritional profile from a JSON file. The final output is a structured JSON object containing the predicted class, confidence score, and macro-nutrients per serving for that dish.​
 
-✔ Sample Dataset Table (GitHub Compatible)
-Food Name	Images	Calories	Protein	Fat	Fiber
-Apple Pie	200	531	22g	15g	8g
-Baked Potato	200	338	25g	22g	1g
-Burger	200	258	17g	2g	1g
-Butter Naan	200	530	1g	7g	8g
-Chai	200	511	5g	17g	10g
-…	…	…	…	…	…
+⭐ Key Features
+34-class food image classification with 200+ images per class.​
 
-Nutritional details are stored in:
+Three CNN models:
 
-📁 food_nutrition.json
-Contains: calories, proteins, fats, carbs, and fiber for every food class.
+VGG‑16 (pretrained, fine-tuned)
 
-3. Model Architecture
-3.1 VGG-16
+ResNet‑50 (deep residual model)
 
-16 layers (13 Conv + 3 FC)
+Custom CNN (lightweight, fast inference)​
 
-Input size: 224×224×3
+Central nutritional database in food_nutrition.json (calories, protein, fat, carbs, fiber for each class).​
 
-Pretrained on ImageNet
+Evaluation with accuracy, precision, recall, F1‑score, TP, FP, FN, TN and confusion matrices, saved in model_performance.json.​
 
-Fine-tuned for food dataset
+JSON-based prediction output, easy to integrate into mobile apps/APIs.
 
-3.2 ResNet-50
+📋 Food Classes (34 Categories)
+Each class is a folder name in the dataset and an entry in food_nutrition.json.
 
-50-layer deep network
+S.No	Class Name	Description (Short)
+1	apple_pie	Baked dessert with sweet apple filling
+2	Baked Potato	Oven-baked whole potato
+3	burger	Patty in a sliced bun with toppings
+4	butter_naan	Leavened Indian flatbread with butter
+5	chai	Spiced Indian milk tea
+6	chapati	Unleavened whole wheat flatbread
+7	cheesecake	Cream cheese-based baked or chilled dessert
+8	chicken_curry	Chicken pieces cooked in spiced gravy
+9	chole_bhature	Spiced chickpeas with deep-fried bread
+10	Crispy Chicken	Deep-fried seasoned chicken
+11	dal_makhani	Creamy lentil curry made with black lentils
+12	dhokla	Steamed fermented gram flour cake
+13	Donut	Deep-fried sweet dough ring or filled piece
+14	fried_rice	Stir-fried rice with vegetables or eggs
+15	Fries	Deep-fried potato strips
+16	Hot Dog	Sausage in a sliced bun
+17	ice_cream	Frozen sweet dairy or non-dairy dessert
+18	idli	Steamed rice-lentil cakes
+19	jalebi	Deep-fried spiral sweet soaked in syrup
+20	kaathi_rolls	Stuffed wrap made with roti or paratha
+21	kadai_paneer	Cottage cheese cooked in spiced tomato gravy
+22	kulfi	Dense traditional Indian frozen dessert
+23	masala_dosa	Dosa filled with spiced potato mixture
+24	momos	Steamed or fried dumplings with filling
+25	omelette	Beaten eggs cooked flat, sometimes with veg
+26	paani_puri	Hollow puris filled with spicy tangy water
+27	pakode	Deep-fried vegetable or paneer fritters
+28	pav_bhaji	Spiced mashed vegetable curry with bread
+29	pizza	Flatbread topped with sauce, cheese, extras
+30	samosa	Fried pastry filled with spiced potatoes etc
+31	Sandwich	Filling between slices of bread
+32	sushi	Vinegared rice with fillings or toppings
+33	Taco	Folded tortilla with savory filling
+34	Taquito	Rolled tortilla filled and fried or baked
+📚 Concepts & Terminology
+Image Classification: Assigning a single label (here, a food class) to an entire input image.
 
-Uses residual blocks
+CNN (Convolutional Neural Network): Neural network using convolution layers to learn patterns (edges, textures, shapes) from images automatically.​
 
-High performance on complex food images
+Pretrained Model: A model (e.g., VGG‑16, ResNet‑50) already trained on a large dataset like ImageNet, reused and fine‑tuned on this food dataset.​
 
-3.3 Custom CNN
+Fine‑tuning: Unfreezing some layers of a pretrained model and continuing training on a new dataset to adapt it to the new task.
 
-4 convolutional layers
+Residual Block / Skip Connection: A structure where the input is added to the output of some layers (used in ResNet‑50) to make very deep networks trainable.​
 
-MaxPooling layers
+Overfitting: When a model learns training data too specifically and performs poorly on new data; augmentation and regularization reduce this.​
 
-Lightweight softmax classifier
+Confusion Matrix: A table that compares true labels vs predicted labels to show TP, FP, FN, and TN for each class.
 
-Fastest inference among all three models
+Precision / Recall / F1‑score:
 
-4. Data Preprocessing
+Precision: Of all samples predicted as a class, how many are correct.
 
-Resize images → 224×224
+Recall: Of all true samples of a class, how many are found.
 
-Normalize pixel values → 0–1
+F1: Harmonic mean of precision and recall, balancing both.
 
-Augmentation:
+🧂 Dataset & Nutritional Annotations
+Number of classes: 34.
 
-Rotation
+Images per class: ≥ 200 JPG images.
+
+Format: RGB images, resized to 224×224 for model input.
+
+Folder structure: Each class has its own folder (e.g., data/train/apple_pie, data/train/burger).​
+
+Nutritional Data (food_nutrition.json)
+food_nutrition.json stores macro‑nutrient values for each food class:
+
+calories – Energy per serving (kcal).
+
+protein_g – Protein content in grams.
+
+fat_g – Fat content in grams.
+
+carbs_g – Carbohydrates in grams.
+
+fiber_g – Fiber in grams.​
+
+Example (structure only):
+
+json
+{
+  "burger": {
+    "calories": 258,
+    "protein_g": 17,
+    "fat_g": 2,
+    "carbs_g": 30,
+    "fiber_g": 1
+  }
+}
+🧪 Data Preprocessing & Augmentation
+Resize: All images → 224 × 224 × 3.
+
+Normalize: Scale pixel values from to for stable training.​
+
+Split:
+
+Train: 70%
+
+Validation: 15%
+
+Test: 15%​
+
+Grouping: Classes are grouped into Group_1 … Group_11 for modular training and evaluation.
+
+Augmentation techniques (applied on training images only):
+
+Rotation (small random angles)
 
 Horizontal flip
 
-Zoom
+Zoom (in/out)
 
-Shear
+Shear transforms
 
-Dataset Splitting:
+These operations increase data diversity and reduce overfitting.​
 
-Train → 70%
+🧠 Model Architectures
+Model	Depth	Key Idea	Usage in Project
+VGG‑16	16 layers	Stacked 3×3 convolutions	High accuracy, fine‑tuned on food data
+ResNet‑50	50 layers	Residual (skip) connections	Handles complex, deep feature learning
+Custom CNN	4 conv + FC	Lightweight, task‑specific network	Fastest inference, suitable for edge
+VGG‑16 (Defined)
+13 convolutional layers + 3 fully‑connected layers.
 
-Validation → 15%
+Initialized with ImageNet weights and adapted to 34 classes by replacing the final classification layer.
 
-Test → 15%
+Some early layers may be frozen; higher layers are fine‑tuned on the food dataset.​
 
-Classes were grouped into:
+ResNet‑50 (Defined)
+50‑layer residual network with many residual blocks.
 
-➡️ Group_1 … Group_11
-for modular training and evaluation.
+Each residual block adds its input to the output of several convolutional layers (skip connection).
 
-5. Training & Evaluation
+Helps train deep networks without vanishing gradients; adapted to output 34 classes.​
 
-Each model is evaluated on:
+Custom CNN (Defined)
+4 convolutional layers with ReLU activation and MaxPooling.
 
-Accuracy
+One or more dense (fully‑connected) layers ending in a softmax layer with 34 outputs.
 
-Precision
+Designed to be smaller and faster than VGG‑16/ResNet‑50 while maintaining reasonable accuracy.​
 
-Recall
+📊 Training Setup & Metrics
+Loss function: Categorical cross‑entropy (multi‑class).
 
-F1-score
+Optimizers: Adam or SGD with momentum.
 
-TP, FP, FN, TN
+Hyperparameters:
 
-All results are stored in:
+Learning rate: typically 1e‑3 to 1e‑4 for fine‑tuning.
 
-📁 model_performance.json
+Batch size: 16–64 (depends on GPU).
 
-6. Results & Analysis
-✔ Sample JSON Output (Clean Formatted)
+Epochs: trained until validation performance stabilizes.
+
+Metrics stored in model_performance.json:
+
+Accuracy (overall and per group)
+
+Precision, Recall, F1‑score per class
+
+TP, FP, FN, TN counts per class​
+
+Example snippet:
+
+json
 {
   "Model_Name": "VGG-16",
   "Model_File": "vgg16_group_1.h5",
@@ -134,7 +232,7 @@ All results are stored in:
   "Test_Accuracy": 88.75,
   "Classes": [
     {
-      "Class_Name": "Biryani",
+      "Class_Name": "biryani",
       "Support": 30,
       "Precision(%)": 90.0,
       "Recall(%)": 93.33,
@@ -146,57 +244,134 @@ All results are stored in:
     }
   ]
 }
+Confusion matrices are generated to visualize per‑class performance.​
 
-✔ Confusion Matrix Example (GitHub Table)
-Actual \ Predicted	Apple Pie	Baked Potato	Burger
-Apple Pie	28	1	1
-Baked Potato	2	27	1
-Burger	1	2	27
-7. Nutritional Data Analysis
+🧮 Nutritional Analysis Pipeline
+Image input: User uploads a food image.
 
-Using food_nutrition.json, you can generate:
+Preprocessing: Resize + normalize.
 
-Calorie distribution graphs
+Prediction:
 
-Protein comparison graphs
+Choose a trained model (e.g., best performing VGG‑16 or ResNet‑50).
 
-Fiber variation charts
+Model outputs predicted class and confidence.
 
-Fat content analysis
+Nutrition lookup:
 
-Useful for:
+Using predicted class as key, fetch values from food_nutrition.json.
 
-✔ Meal planning
-✔ Diet optimization
-✔ Calorie tracking
+JSON response:
 
-8. Future Scope
+json
+{
+  "Predicted_Class": "burger",
+  "Confidence": 0.94,
+  "Calories": 258,
+  "Protein_g": 17,
+  "Fat_g": 2,
+  "Carbs_g": 30,
+  "Fiber_g": 1
+}
+This is directly useful for calorie tracking, diet logs, and recommendation systems.​
 
-Real-time prediction using mobile camera
+🛠️ Tech Stack & Library Explanations
+Python: Core language for data handling, modeling, and scripting.
 
-Add more Indian & international cuisines
+TensorFlow / Keras (if used):
 
-Portion size detection
+TensorFlow: Framework for building and training deep learning models with GPU support.
 
-Explainable AI (Grad-CAM Heatmaps)
+Keras: High‑level API on top of TensorFlow, providing layers like Conv2D, MaxPooling2D, Dense, and utilities for data generators.​
 
-Cloud deployment (AWS/GCP/Render)
+PyTorch (if used instead):
 
-Integration with fitness apps
+Deep learning framework with dynamic computation graphs, commonly used for research and flexible model design.​
 
-9. References
+NumPy: Efficient numerical operations on arrays (used for pre/post‑processing, metrics).
 
-Simonyan, K., Zisserman, A. (2014) — Very Deep CNNs for Image Recognition
+Pandas: Tabular data manipulation (analysis of results, nutritional tables, CSV/JSON handling).
 
-He, K., Zhang, X., Ren, S., Sun, J. (2016) — Deep Residual Networks
+Matplotlib / Seaborn: Plotting accuracy curves, loss curves, confusion matrices, and nutrition distributions.​
 
-Food-101 Dataset: https://www.vision.ee.ethz.ch/datasets_extra/food-101/
+OpenCV or Pillow (PIL): Image loading, resizing, and basic image manipulations.
 
-📌 Project Author Details
-Field	Details
-Name	Nagalakshmi Ragolu
-Email	nagalakshmiragolu@gmail.com
+Flask / FastAPI (optional for deployment):
 
-LinkedIn	https://www.linkedin.com/in/ragolu-nagalakshmi-71587a22
+Flask: Lightweight Python web framework for simple REST APIs.
 
-Education	B.Tech – Information Technology
+FastAPI: High‑performance web framework with automatic docs, good for ML model serving.
+
+📁 Project Structure
+text
+.
+├── data/
+│   ├── train/
+│   ├── val/
+│   ├── test/
+│   └── food_nutrition.json
+├── models/
+│   ├── vgg16_group_*.h5
+│   ├── resnet50_group_*.h5
+│   └── custom_cnn_group_*.h5
+├── results/
+│   └── model_performance.json
+├── notebooks/
+│   └── exploration_and_training.ipynb
+├── src/
+│   ├── data_preprocessing.py
+│   ├── train_vgg16.py
+│   ├── train_resnet50.py
+│   ├── train_custom_cnn.py
+│   ├── evaluate_models.py
+│   └── inference_api.py
+└── README.md
+▶️ How to Run
+1. Clone
+bash
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+2. Install Dependencies
+bash
+pip install -r requirements.txt
+3. Prepare Data
+Place images into data/train, data/val, data/test, each class in its own folder.
+
+Ensure food_nutrition.json is inside data/.
+
+4. Train Models
+bash
+python src/train_vgg16.py
+python src/train_resnet50.py
+python src/train_custom_cnn.py
+5. Evaluate
+bash
+python src/evaluate_models.py
+6. Inference on One Image
+bash
+python src/inference_api.py --image_path sample.jpg
+🔮 Future Work
+Real‑time mobile camera integration.
+
+Portion size estimation (volume/area based).
+
+Grad‑CAM heatmaps to explain model focus regions.
+
+Cloud deployment (AWS/GCP/Render) with REST API.
+
+Integration with fitness trackers and health apps.​
+
+📚 References
+Simonyan, K., Zisserman, A. (2014). Very Deep Convolutional Networks for Large‑Scale Image Recognition.​
+
+He, K., Zhang, X., Ren, S., Sun, J. (2016). Deep Residual Learning for Image Recognition.​
+
+Food‑101 Dataset (for inspiration in design): https://www.vision.ee.ethz.ch/datasets_extra/food-101/​
+
+Works on food recognition and nutrition estimation using CNNs.​
+
+👩‍💻 Author
+Name: Nagalakshmi Ragolu
+Education: B.Tech – Information Technology
+Email: nagalakshmiragolu@gmail.com
+LinkedIn: https://www.linkedin.com/in/ragolu-nagalakshmi-71587a22
